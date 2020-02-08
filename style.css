@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    background-color: #2f4f4f;
+    overflow: auto;
+}
+body {
+    background-color: #306880;
+    border-radius: 20px;
+    text-align: center;
+    padding:20px;
+    overflow: auto;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.selections-container {
+    display:block;
+    width: 60%;
+    float:left;
+}
+
+.selections {
+    width: fit-content;
+    background:#499CBF;
+    border-radius: 20px;
+    display:block;
+    padding:30px;
+    padding-right: 10px;  
+    margin : 0 auto;
+}
+.selections img {
+    display:inline-block;
+    margin-right:20px;;
+    border: 3px solid #499CBF;
+}
+
+h1{
+    text-align: center;
+    color:white;
+}
+
+.selections img:hover {
+    border: 3px solid white !important;
+    cursor:pointer;
+}
+
+.selections img:active, .userSelected {
+    border: 3px solid white !important;
+    box-shadow: 5px 5px gainsboro;
+    transform: translateY(4px) translateX(2px);
+    transition: 150ms;
+}
+
+.cpuSelected {
+    box-shadow: 5px 5px #666;
+    border: 3px solid black !important;
+    transform: translateY(4px) translateX(2px);
+    transition: 150ms;
+}
+
+.bothSelected {
+    box-shadow: 5px 5px #246e5c !important;
+    border: 3px solid #54FFD5 !important;
+    transform: translateY(4px) translateX(2px);
+    transition: 150ms;
+}
+
+.score-container {
+    width:20%;
+    float:left;
+    margin: 0 auto;
+    padding:10px;
+    
+}
+
+.score {
+    width: 100%;
+    cursor: default;
+    height: 300px;
+    border: 0;
+    border-radius: 20px;
+    outline: none !important;
+    font-size: 200px;
+    background-color: #57BBE6;
+    color:white;
+    text-shadow: 1px 1px 4px white;
+    display: block;
+    position: relative;
+    z-index: 5;
+    
+}
+
+#round-details {
+    width: 60%;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    color:white;
+    font-size: 30px;
+    text-shadow: 0 0 3px white;
+    background-color: #57BBE6;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display:inline-block;
+    
+}
+
+.legend { list-style: none; display: inline-block; margin:5px auto;}
+.legend li { float: left; margin-right: 10px; color:white; font-size:15px; }

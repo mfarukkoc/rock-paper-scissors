@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors Game</h1>
+    <div class="row">
+        <div>
+            <div class="score-container">
+                <h1>Your Score:</h1>
+                <div class="score" id="usr-score">0</div>
+            </div>
+        </div>
+        
+        <div class="selections-container">
+            <div class="selections">
+                <img src="./images/rock.png" alt="Rock" id="Rock" onclick="playRound(0)">
+                <img src="./images/paper.png" alt="Paper" id="Paper" onclick="playRound(1)">
+                <img src="./images/scissors.png" alt="Scissors" id="Scissors" onclick="playRound(2)">
+            </div>
+        </div>
+        <div class="score-container">
+            <h1>CPU Score:</h1>
+            <div class="score" id="cpu-score">0</div>
+        </div>
+    </div>
+    <div id="round-details">
+        Pick your move!
+    </div>
+    <div>
+        <ul class="legend">
+            <li><span style="background-color:black" class="dot"></span> Selected by CPU</li>
+            <li><span style="background-color:white" class="dot"></span> Selected by YOU</li>
+            <li><span style="background-color:#54FFD5" class="dot"></span> Selected by YOU and CPU</li>
+        </ul>
+    
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
