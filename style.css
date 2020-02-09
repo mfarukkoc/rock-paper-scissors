@@ -9,7 +9,7 @@ body {
     background-color: #306880;
     border-radius: 20px;
     text-align: center;
-    padding:20px;
+    padding:10px;
     overflow: auto;
 }
 
@@ -117,3 +117,35 @@ h1{
 
 .legend { list-style: none; display: inline-block; margin:5px auto;}
 .legend li { float: left; margin-right: 10px; color:white; font-size:15px; }
+
+@media screen and (max-width: 1024px) {
+    .selections-container {
+        width:50%;        
+    }
+    .selections{
+        padding:5px !important;
+    }
+    .selections img {
+        margin: 0 auto;
+        margin-top: 3px;
+        height:25vh;
+    }
+    .score-container{      
+        width:25%;
+    }
+    h1 {
+        font-size: large;
+    }
+    body {
+        padding:0px;
+    }
+    .score {
+        height:12vh;
+        font-size:8vh;
+    }
+    #round-details {
+        padding: 5px;
+        color:white;
+        font-size: 3vh;
+    }
+}
