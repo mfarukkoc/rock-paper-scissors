@@ -14,7 +14,7 @@ const computerPlay = () => Math.floor((Math.random()*3))
 
 const playRound = (playerSelection) => {
     computerSelection = computerPlay();
-    focusOnSelection(choices[playerSelection], choices[computerSelection]);
+    focusOnSelection(choices[playerSelection], choices[computerSelection], winningMatrix[playerSelection][computerSelection]);
     if(winningMatrix[playerSelection][computerSelection] == 1) {
         round.innerHTML = ("You Win! " + choices[playerSelection] + " beats " + choices[computerSelection])
         userScore.innerHTML = parseInt(userScore.innerHTML) + 1;
@@ -30,11 +30,14 @@ const playRound = (playerSelection) => {
     }
 }
 
-const focusOnSelection = (user, cpu) => {
+const focusOnSelection = (user, cpu, winner) => {
     var selections = document.getElementsByClassName("selections")[0].children
     for (var i = 0, len = selections.length; i < len; i++) {
-        selections[i].classList.remove("userSelected","cpuSelected","bothSelected")
+        selections[i].classList.remove("userSelected","cpuSelected","bothSelected","winner")
     }
+    setTimeout(()=>{
+        document.getElementById(winner > 0 ? user : cpu).classList.add("winner")
+    } ,50)
     if(user != cpu) {
         document.getElementById(user).classList.add("userSelected")
         document.getElementById(cpu).classList.add("cpuSelected")
